@@ -1,0 +1,1 @@
+C:\Users\Mads\documents\visual studio 2015\Projects\TSEIS\HelloWorld\obj\x64\Debug\HelloWorld.csprojResolveAssemblyReference.cache
