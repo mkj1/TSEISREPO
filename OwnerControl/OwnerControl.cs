@@ -23,16 +23,42 @@ namespace OwnerControl
             : base(context)
         { }
 
-        public async Task<Stock> AddStockAsync()
+        public async Task<List<Stock>> AddStockAsync()
         {
             var myDictionary =
-                 await this.StateManager.GetOrAddAsync<IReliableDictionary<string, Stock>>("myDictionary");
+                 await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
+
+            using (ITransaction tx = StateManager.CreateTransaction())
+            {
+                ConditionalValue<List<Stock>> currentStock =
+                   await myDictionary.TryGetValueAsync(tx, "Hey");
+
+
+                if (currentStock.HasValue)
+                {
+                    var updatedStock = new List<Stock>();
+                    updatedStock = currentStock.Value;
+
+                    updatedStock.Add(new Stock() { value = 25, name = "BABA", owner = "John" });
+
+                    ServiceEventSource.Current.ServiceMessage(this.Context, "OwnerControl: Stock added. Now contains {0} stocks.", updatedStock.Count.ToString());
+
+                    await myDictionary.SetAsync(tx, "Hey", updatedStock);
+
+                    await tx.CommitAsync();
+
+                }
+
+
+
+            }
 
             using (var tx = this.StateManager.CreateTransaction())
             {
                 var result = await myDictionary.TryGetValueAsync(tx, "Hey");
                 return result.Value;
             }
+
         }
 
 
@@ -62,53 +88,25 @@ namespace OwnerControl
         {
             // TODO: Replace the following sample code with your own logic 
             //       or remove this RunAsync override if it's not needed in your service.
+            var myDictionary =
+            await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
 
-            var myDictionary = await this.StateManager.GetOrAddAsync<IReliableDictionary<string, Stock>>("myDictionary");
-
-            while (true)
+            using (ITransaction tx = StateManager.CreateTransaction())
             {
+                ConditionalValue<List<Stock>> currentStock =
+                   await myDictionary.TryGetValueAsync(tx, "Hey");
 
-                using (ITransaction tx = StateManager.CreateTransaction())
+
+                if (!currentStock.HasValue)
                 {
-                    // Use the user’s name to look up their data
-                    ConditionalValue<Stock> currentStock =
-                       await myDictionary.TryGetValueAsync(tx, "Hey");
+                    await myDictionary.TryAddAsync(tx, "Hey", new List<Stock>() { });
+                    await tx.CommitAsync();
 
-                    // The user exists in the dictionary, update one of their properties.
-                    if (currentStock.HasValue)
-                    {
-                        // Create new user object with the same state as the current user object.
-                        // NOTE: This must be a deep copy; not a shallow copy. Specifically, only
-                        // immutable state can be shared by currentUser & updatedUser object graphs.
-                        Stock updatedStock = new Stock() { name = currentStock.Value.name, value = currentStock.Value.value, owner = currentStock.Value.owner };
-
-                        // In the new object, modify any properties you desire
-                        updatedStock.value++;
-
-                        // Update the key’s value to the updateUser info
-                        await myDictionary.SetAsync(tx, "Hey", updatedStock);
-
-                        await tx.CommitAsync();
-                    }
-
-                    else
-                    {
-
-                            // AddAsync takes key's write lock; if >4 secs, TimeoutException
-                            // Key & value put in temp dictionary (read your own writes),
-                            // serialized, redo/undo record is logged & sent to
-                            // secondary replicas
-                            await myDictionary.TryAddAsync(tx, "Hey", new Stock() {value= 25, owner ="John", name="BABA" });
-
-                            // CommitAsync sends Commit record to log & secondary replicas
-                            // After quorum responds, all locks released
-                            await tx.CommitAsync();
-
-                    }
                 }
 
-                await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }
+
+
         }
     }
 }

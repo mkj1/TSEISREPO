@@ -1,4 +1,4 @@
-C:\Users\Mads\documents\visual studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.dll
-C:\Users\Mads\documents\visual studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.pdb
-C:\Users\Mads\documents\visual studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.dll
-C:\Users\Mads\documents\visual studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.pdb
+C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.dll
+C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.pdb
+C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.dll
+C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.pdb

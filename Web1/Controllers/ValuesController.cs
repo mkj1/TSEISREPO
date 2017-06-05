@@ -6,23 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.ServiceFabric.Services.Client;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
 using OwnerControl.Interface;
+using Models;
+using System.Web.Http;
 
 namespace Web1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     public class ValuesController : Controller
     {
         // GET api/values
-        public async Task<IEnumerable<string>> Get()
+        [HttpGet]
+        public string Get()
         {
-            IAddStock stock =
-                ServiceProxy.Create<IAddStock>(new Uri("fabric:/TSEIS/OwnerControl"), new ServicePartitionKey(0));
+            //IAddStock stock =
+            //    ServiceProxy.Create<IAddStock>(new Uri("fabric:/TSEIS/OwnerControl"), new ServicePartitionKey(0));
 
-            var ret = await stock.AddStockAsync();
+            //var x = await stock.AddStockAsync();
 
-            long value = ret.value;
-
-            return new string[] { value.ToString() };
+            return "test";
         }
 
         // GET api/values/5
@@ -33,9 +34,14 @@ namespace Web1.Controllers
         }
 
         // POST api/values
+        [Route("provider")]
         [HttpPost]
-        public void Post([FromBody]string value)
+        public Stock Post([FromUri]Stock stck)
         {
+            var x = stck;
+            x.name = "hehehe";
+
+            return x;
         }
 
         // PUT api/values/5

@@ -8,6 +8,8 @@ using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using TobinTaxer.Interface;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
+using OwnerControl.Interface;
+using Microsoft.ServiceFabric.Services.Client;
 
 namespace Provider
 {
@@ -35,13 +37,21 @@ namespace Provider
                 cancellationToken.ThrowIfCancellationRequested();
 
 
+
+
+
                 ICalcTax calcTaxClient = ServiceProxy.Create<ICalcTax>(new Uri("fabric:/TSEIS/TobinTaxer"));
 
                 var restamount = await calcTaxClient.CalcTaxAsync(600);
 
                 ServiceEventSource.Current.ServiceMessage(this.Context, "restamount-{0}", restamount.ToString());
 
-                await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
+                await Task.Delay(TimeSpan.FromSeconds(3), cancellationToken);
+
+                IAddStock stock =
+ServiceProxy.Create<IAddStock>(new Uri("fabric:/TSEIS/OwnerControl"), new ServicePartitionKey(0));
+
+                var x = await stock.AddStockAsync();
             }
         }
     }

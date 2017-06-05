@@ -2,11 +2,8 @@
 {
     public class Stock
     {
-        public Stock()
-        { }
-
-        public long value;
-        public string name;
-        public string owner;
+        public long value { get; set; }
+        public string name { get; set; }
+        public string owner { get; set; }
     }
 }
