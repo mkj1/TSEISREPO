@@ -2,3 +2,12 @@ C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\bin\x64\Debug\M
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.pdb
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.dll
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\obj\x64\Debug\Models.pdb
+C:\Users\Mads\Desktop\TSEISREPO\Models\bin\x64\Debug\Models.dll
+C:\Users\Mads\Desktop\TSEISREPO\Models\bin\x64\Debug\Models.pdb
+C:\Users\Mads\Desktop\TSEISREPO\Models\obj\x64\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Mads\Desktop\TSEISREPO\Models\obj\x64\Debug\Models.dll
+C:\Users\Mads\Desktop\TSEISREPO\Models\obj\x64\Debug\Models.pdb
+C:\Users\Mads\Desktop\0606\Models\bin\x64\Debug\Models.dll
+C:\Users\Mads\Desktop\0606\Models\bin\x64\Debug\Models.pdb
+C:\Users\Mads\Desktop\0606\Models\obj\x64\Debug\Models.dll
+C:\Users\Mads\Desktop\0606\Models\obj\x64\Debug\Models.pdb

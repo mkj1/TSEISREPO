@@ -109,6 +109,10 @@
       <Project>{FABECCCE-B0AA-4DD6-B548-C31F8E483A44}</Project>
       <Name>OwnerControl.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Provider.Interface\Provider.Interface.csproj">
+      <Project>{38e16778-1159-4ad8-ba58-a5fcaa335457}</Project>
+      <Name>Provider.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TobinTaxer.Interface\TobinTaxer.Interface.csproj">
       <Project>{0c3a4715-cfe7-4fe6-919c-091e34112740}</Project>
       <Name>TobinTaxer.Interface</Name>

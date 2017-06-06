@@ -23,7 +23,20 @@ namespace OwnerControl
             : base(context)
         { }
 
-        public async Task<List<Stock>> AddStockAsync()
+        public async Task<List<Stock>> AddStockAsync() //returns all
+        {
+            var myDictionary =
+                 await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
+
+            using (var tx = this.StateManager.CreateTransaction())
+            {
+                var result = await myDictionary.TryGetValueAsync(tx, "TSEISlist");
+                return result.Value;
+            }
+
+        }
+
+        public async Task<List<Stock>> GetAllAsync() //adds stocks
         {
             var myDictionary =
                  await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
@@ -31,7 +44,7 @@ namespace OwnerControl
             using (ITransaction tx = StateManager.CreateTransaction())
             {
                 ConditionalValue<List<Stock>> currentStock =
-                   await myDictionary.TryGetValueAsync(tx, "Hey");
+                   await myDictionary.TryGetValueAsync(tx, "TSEISlist");
 
 
                 if (currentStock.HasValue)
@@ -39,11 +52,13 @@ namespace OwnerControl
                     var updatedStock = new List<Stock>();
                     updatedStock = currentStock.Value;
 
-                    updatedStock.Add(new Stock() { value = 25, name = "BABA", owner = "John" });
+                    updatedStock.Add(new Stock() { value = 25, name = "BABA", owner = "John", id = ++idcounter });
+                    updatedStock.Add(new Stock() { value = 35, name = "DB", owner = "John", id = ++idcounter });
+                    updatedStock.Add(new Stock() { value = 45, name = "CARLSBERG", owner = "John", id = ++idcounter });
 
                     ServiceEventSource.Current.ServiceMessage(this.Context, "OwnerControl: Stock added. Now contains {0} stocks.", updatedStock.Count.ToString());
 
-                    await myDictionary.SetAsync(tx, "Hey", updatedStock);
+                    await myDictionary.SetAsync(tx, "TSEISlist", updatedStock);
 
                     await tx.CommitAsync();
 
@@ -55,9 +70,56 @@ namespace OwnerControl
 
             using (var tx = this.StateManager.CreateTransaction())
             {
-                var result = await myDictionary.TryGetValueAsync(tx, "Hey");
+                var result = await myDictionary.TryGetValueAsync(tx, "TSEISlist");
                 return result.Value;
             }
+
+        }
+
+
+
+        public async Task<bool> UpdateStockAsync(Stock stck) //updates stock
+        {
+
+            var myDictionary =
+                 await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
+
+            using (ITransaction tx = StateManager.CreateTransaction())
+            {
+                ConditionalValue<List<Stock>> currentStockList =
+                   await myDictionary.TryGetValueAsync(tx, "TSEISlist");
+
+
+
+                string newstock = "N/A";
+                if (currentStockList.HasValue)
+                {
+                    var updatedStockList = new List<Stock>();
+                    updatedStockList = currentStockList.Value;
+
+                    foreach(var curstck in updatedStockList)
+                    {
+                        if(curstck.id == stck.id)
+                        {
+                            curstck.owner = stck.owner;
+                            newstock = stck.name;
+                        }
+                    }
+
+
+                    ServiceEventSource.Current.ServiceMessage(this.Context, "OwnerControl: Stock" + " {0} " + " changed owner.", newstock);
+
+                    await myDictionary.SetAsync(tx, "TSEISlist", updatedStockList);
+
+                    await tx.CommitAsync();
+
+                }
+
+
+
+            }
+
+            return true;
 
         }
 
@@ -94,12 +156,12 @@ namespace OwnerControl
             using (ITransaction tx = StateManager.CreateTransaction())
             {
                 ConditionalValue<List<Stock>> currentStock =
-                   await myDictionary.TryGetValueAsync(tx, "Hey");
+                   await myDictionary.TryGetValueAsync(tx, "TSEISlist");
 
 
                 if (!currentStock.HasValue)
                 {
-                    await myDictionary.TryAddAsync(tx, "Hey", new List<Stock>() { });
+                    await myDictionary.TryAddAsync(tx, "TSEISlist", new List<Stock>() { });
                     await tx.CommitAsync();
 
                 }
@@ -108,5 +170,7 @@ namespace OwnerControl
 
 
         }
+
+        private int idcounter { get; set; } = 0;
     }
 }

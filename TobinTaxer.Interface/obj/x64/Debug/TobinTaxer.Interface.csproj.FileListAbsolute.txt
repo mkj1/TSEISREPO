@@ -19,3 +19,46 @@ C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\TobinTaxer.Interface\b
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.xml
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.dll
 C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.pdb
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\TobinTaxer.Interface.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\TobinTaxer.Interface.pdb
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.Interfaces.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.FabricTransport.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Internal.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.Remoting.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Management.ServiceModel.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Management.ServiceModel.XmlSerializers.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Strings.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.Interfaces.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.FabricTransport.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.Remoting.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.xml
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.dll
+C:\Users\Mads\Desktop\TSEISREPO\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.pdb
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\TobinTaxer.Interface.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\TobinTaxer.Interface.pdb
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.Interfaces.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.FabricTransport.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Internal.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.Remoting.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Management.ServiceModel.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Management.ServiceModel.XmlSerializers.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.Strings.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Data.Interfaces.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.FabricTransport.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\Microsoft.ServiceFabric.Services.Remoting.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\bin\x64\Debug\System.Fabric.xml
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.dll
+C:\Users\Mads\Desktop\0606\TobinTaxer.Interface\obj\x64\Debug\TobinTaxer.Interface.pdb

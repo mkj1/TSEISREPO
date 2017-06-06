@@ -19,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\OwnerControl.Interface\OwnerControl.Interface.csproj" />
+    <ProjectReference Include="..\Provider.Interface\Provider.Interface.csproj" />
+    <ProjectReference Include="..\Requester.Interface\Requester.Interface.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

@@ -29,6 +29,12 @@
         },
         "OwnerControl.Interface": {
           "target": "project"
+        },
+        "Provider.Interface": {
+          "target": "project"
+        },
+        "Requester.Interface": {
+          "target": "project"
         }
       }
     }
