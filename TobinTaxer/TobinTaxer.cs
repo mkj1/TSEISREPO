@@ -22,7 +22,7 @@ namespace TobinTaxer
 
         public Task<float> CalcTaxAsync(float amount)
         {
-            float newamount = (amount /10)*9;
+            float newamount = (amount / 10) * 11;
 
             return Task.FromResult(newamount);
         }

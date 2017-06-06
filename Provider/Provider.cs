@@ -37,21 +37,12 @@ namespace Provider
                 cancellationToken.ThrowIfCancellationRequested();
 
 
-
-
-
-                ICalcTax calcTaxClient = ServiceProxy.Create<ICalcTax>(new Uri("fabric:/TSEIS/TobinTaxer"));
-
-                var restamount = await calcTaxClient.CalcTaxAsync(600);
-
-                ServiceEventSource.Current.ServiceMessage(this.Context, "restamount-{0}", restamount.ToString());
-
                 await Task.Delay(TimeSpan.FromSeconds(3), cancellationToken);
 
                 IAddStock stock =
 ServiceProxy.Create<IAddStock>(new Uri("fabric:/TSEIS/OwnerControl"), new ServicePartitionKey(0));
 
-                var x = await stock.AddStockAsync();
+                var x = await stock.GetAllAsync();
             }
         }
     }

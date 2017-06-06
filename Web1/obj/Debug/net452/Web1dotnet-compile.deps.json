@@ -19,6 +19,7 @@
         "dependencies": {
           "Models": "1.0.0",
           "OwnerControl.Interface": "1.0.0",
+          "Requester.Interface": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "1.0.1",
           "Microsoft.AspNetCore.Mvc.WebApiCompatShim": "1.0.1",
           "Microsoft.AspNetCore.Routing": "1.0.1",
@@ -1051,6 +1052,11 @@
           "bin/x64/Debug/OwnerControl.Interface.dll": {}
         }
       },
+      "Requester.Interface/1.0.0": {
+        "compile": {
+          "bin/x64/Debug/Requester.Interface.dll": {}
+        }
+      },
       "mscorlib/4.0.0.0": {
         "compile": {
           ".NETFramework/v4.5.2/mscorlib.dll": {}
@@ -1117,6 +1123,7 @@
         "dependencies": {
           "Models": "1.0.0",
           "OwnerControl.Interface": "1.0.0",
+          "Requester.Interface": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "1.0.1",
           "Microsoft.AspNetCore.Mvc.WebApiCompatShim": "1.0.1",
           "Microsoft.AspNetCore.Routing": "1.0.1",
@@ -2076,6 +2083,22 @@
           "bin/x64/Debug/OwnerControl.Interface.dll": {}
         }
       },
+      "Requester.Interface/1.0.0": {
+        "runtime": {
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/Microsoft.ServiceFabric.Internal.Strings.dll": {},
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/Microsoft.ServiceFabric.Internal.dll": {},
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/System.Fabric.Management.ServiceModel.XmlSerializers.dll": {},
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/System.Fabric.Management.ServiceModel.dll": {},
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/System.Fabric.Strings.dll": {},
+          "../packages/Microsoft.ServiceFabric.5.6.210/lib/net45/System.Fabric.dll": {},
+          "../packages/Microsoft.ServiceFabric.Data.2.6.210/lib/net45/Microsoft.ServiceFabric.Data.Interfaces.dll": {},
+          "../packages/Microsoft.ServiceFabric.Data.2.6.210/lib/net45/Microsoft.ServiceFabric.Data.dll": {},
+          "../packages/Microsoft.ServiceFabric.FabricTransport.Internal.2.6.210/lib/net45/Microsoft.ServiceFabric.FabricTransport.dll": {},
+          "../packages/Microsoft.ServiceFabric.Services.2.6.210/lib/net45/Microsoft.ServiceFabric.Services.dll": {},
+          "../packages/Microsoft.ServiceFabric.Services.Remoting.2.6.210/lib/net45/Microsoft.ServiceFabric.Services.Remoting.dll": {},
+          "bin/x64/Debug/Requester.Interface.dll": {}
+        }
+      },
       "mscorlib/4.0.0.0": {},
       "System/4.0.0.0": {},
       "System.Core/4.0.0.0": {},
@@ -2662,6 +2685,11 @@
       "sha512": ""
     },
     "OwnerControl.Interface/1.0.0": {
+      "type": "msbuildproject",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Requester.Interface/1.0.0": {
       "type": "msbuildproject",
       "serviceable": false,
       "sha512": ""

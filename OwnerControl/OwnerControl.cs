@@ -23,7 +23,20 @@ namespace OwnerControl
             : base(context)
         { }
 
-        public async Task<List<Stock>> AddStockAsync()
+        public async Task<List<Stock>> AddStockAsync() //returns all
+        {
+            var myDictionary =
+                 await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
+
+            using (var tx = this.StateManager.CreateTransaction())
+            {
+                var result = await myDictionary.TryGetValueAsync(tx, "Hey");
+                return result.Value;
+            }
+
+        }
+
+        public async Task<List<Stock>> GetAllAsync() //adds stocks
         {
             var myDictionary =
                  await this.StateManager.GetOrAddAsync<IReliableDictionary<string, List<Stock>>>("myDictionary");
@@ -40,6 +53,8 @@ namespace OwnerControl
                     updatedStock = currentStock.Value;
 
                     updatedStock.Add(new Stock() { value = 25, name = "BABA", owner = "John" });
+                    updatedStock.Add(new Stock() { value = 35, name = "DB", owner = "John" });
+                    updatedStock.Add(new Stock() { value = 45, name = "CALSBERG", owner = "John" });
 
                     ServiceEventSource.Current.ServiceMessage(this.Context, "OwnerControl: Stock added. Now contains {0} stocks.", updatedStock.Count.ToString());
 

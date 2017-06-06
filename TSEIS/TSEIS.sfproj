@@ -30,8 +30,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Broker\Broker.csproj" />
     <ProjectReference Include="..\OwnerControl\OwnerControl.csproj" />
     <ProjectReference Include="..\Provider\Provider.csproj" />
+    <ProjectReference Include="..\Requester\Requester.csproj" />
     <ProjectReference Include="..\TobinTaxer\TobinTaxer.csproj" />
     <ProjectReference Include="..\Web1\Web1.xproj" />
   </ItemGroup>

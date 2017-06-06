@@ -8,8 +8,8 @@
 -debug:full
 -nostdlib
 -nologo
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\obj\Debug\net452\dotnet-compile.assemblyinfo.cs"
--out:"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\bin\Debug\net452\Web1.exe"
+"C:\Users\Mads\Desktop\0606\Web1\obj\Debug\net452\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\Mads\Desktop\0606\Web1\bin\Debug\net452\Web1.exe"
 -r:"C:\Users\Mads\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.2\lib\net45\System.Net.Http.Formatting.dll"
 -r:"C:\Users\Mads\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\net451\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\Mads\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll"
@@ -126,8 +126,9 @@
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Threading.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Threading.Tasks.dll"
 -r:"C:\Users\Mads\.nuget\packages\System.Threading.Tasks.Extensions\4.0.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll"
--r:"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Models\bin\x64\Debug\Models.dll"
--r:"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\OwnerControl.Interface\bin\x64\Debug\OwnerControl.Interface.dll"
+-r:"C:\Users\Mads\Desktop\0606\Models\bin\x64\Debug\Models.dll"
+-r:"C:\Users\Mads\Desktop\0606\OwnerControl.Interface\bin\x64\Debug\OwnerControl.Interface.dll"
+-r:"C:\Users\Mads\Desktop\0606\Requester.Interface\bin\x64\Debug\Requester.Interface.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll"
@@ -140,9 +141,9 @@
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ServiceModel.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Diagnostics.Tracing.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Reflection.Primitives.dll"
--resource:"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\obj\Debug\net452\Web1dotnet-compile.deps.json",Web1.deps.json
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\Program.cs"
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\ServiceEventSource.cs"
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\Startup.cs"
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\Web1.cs"
-"C:\Users\Mads\Documents\Visual Studio 2015\Projects\TSEIS\Web1\Controllers\ValuesController.cs"
+-resource:"C:\Users\Mads\Desktop\0606\Web1\obj\Debug\net452\Web1dotnet-compile.deps.json",Web1.deps.json
+"C:\Users\Mads\Desktop\0606\Web1\Program.cs"
+"C:\Users\Mads\Desktop\0606\Web1\ServiceEventSource.cs"
+"C:\Users\Mads\Desktop\0606\Web1\Startup.cs"
+"C:\Users\Mads\Desktop\0606\Web1\Web1.cs"
+"C:\Users\Mads\Desktop\0606\Web1\Controllers\ValuesController.cs"

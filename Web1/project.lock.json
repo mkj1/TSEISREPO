@@ -1569,6 +1569,9 @@
         "dependencies": {
           "Models": "1.0.0"
         }
+      },
+      "Requester.Interface/1.0.0": {
+        "type": "project"
       }
     }
   },
@@ -4305,6 +4308,10 @@
     "OwnerControl.Interface/1.0.0": {
       "type": "project",
       "msbuildProject": "../OwnerControl.Interface/OwnerControl.Interface.csproj"
+    },
+    "Requester.Interface/1.0.0": {
+      "type": "project",
+      "msbuildProject": "../Requester.Interface/Requester.Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4328,7 +4335,8 @@
     ],
     ".NETFramework,Version=v4.5.2": [
       "Models",
-      "OwnerControl.Interface"
+      "OwnerControl.Interface",
+      "Requester.Interface"
     ]
   },
   "tools": {},

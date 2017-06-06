@@ -8,6 +8,7 @@ namespace OwnerControl.Interface
 
     public interface IAddStock : IService
     {
-        Task<List<Stock>> AddStockAsync();
+        Task<List<Stock>> AddStockAsync(); //returns all
+        Task<List<Stock>> GetAllAsync(); //addstock
     }
 }
